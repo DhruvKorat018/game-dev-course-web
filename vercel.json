@@ -1,14 +1,10 @@
 {
    "version": 2,
-   "name": "music-album",
+   "name": "code-highlighter",
    "builds": [
-      {
-         "src": "src/api/*.js",
-         "use": "@vercel/node"
-      },
-      {
-         "src": "src/frontend",
-         "use": "@vercel/static"
-      }
+      { "src": "app.js", "use": "@vercel/node" }
+   ],
+   "routes": [
+      { "src": "/(.*)", "dest": "/app.js" }
    ]
-}
+ }
